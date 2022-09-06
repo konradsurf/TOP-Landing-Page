@@ -1,24 +1,151 @@
 body {
-  font-family: 'Roboto'; 
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 400;
+  display: flex;
+  flex-direction: column; /* arranges the header, hero, content and footer vertically 
+  within body flexbox */
+  margin: 0; 
 }
 
 .header {
   display: flex;
   background-color: #1F2937;
-  color: #F9FAF8
+  color: #F9FAF8;
+  font-weight: 400;
+  justify-content: space-between;  /* separates logo to left and links right */
+  padding: 1rem 8rem 1rem 8rem;  /* create space to left and right of header content 
+  - and a little bit top and bottom */
 }
 
-.navigation {
+h3, ul {
+  margin-top: 0;  /* these two lines removed the top and bottom margin in the header 
+  - both on logo and links */
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.links {
+  list-style-type: none;  /* remove bulletpoints */
   display: flex; 
-}
-
-ul {
-  list-style-type: none;
-  text-decoration: none;
-
+  gap: 1rem;  /* gap between links */
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none; /* remove hyperlink underline */
   color: #F9FAF8;
+}
+
+.hero {
+  background-color: #1F2937;
+  color: #F9FAF8;
+  padding: 5rem 8rem 5rem 8rem;  /* create space around hero section
+  - same as header - not sure if top and bottom is appropriate though*/
+  display: flex; /* arrange hero-content and picture horizaontally on opposite sides of page */
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;  /* put hero-content into column */
+  align-items: flex-start;  /* change from default stretch to stop content from stretching all the way to the image */
+  margin-right: 5rem;  /* create spacing between hero content on left and img on right */
+}
+
+h1 {
+  font-weight: normal;
+}
+
+.hero-button {
+  background-color: #3882F6;
+  color: #F9FAF8;
+  border-radius: 6px;
+  border-style: solid; 
+  border-color: #F9FAF8;
+  padding: 8px 24px; 
+}
+
+h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 900;
+  color: #1F2937;
+}
+
+.subtext {
+  color: #E5E7EB;  /* make hero subtext lower contrast than hero h1  */
+}
+
+.cards-container {
+  display: flex; 
+  justify-content: space-between;
+  padding: 2rem 4rem 2rem 4rem;
+}
+
+.card-subtext {
+  width: 175px; 
+  text-align: center;
+}
+
+.card {
+  border-radius: 8px;
+  border:#3882F6;
+  border-style: solid;
+}
+
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 16rem;
+  background-color: #E5E7EB;
+}
+
+.quote {
+  font-size: 36px;
+  color: #1F2937;
+  font-style: italic;
+}
+
+.author {
+  align-self: flex-end;
+  font-weight: bold;
+  color: #1F2937;
+}
+
+.action-box {
+  background-color: #3882F6;
+  margin: 6rem 12rem;
+  border-radius: 6px;
+  display: flex;
+  padding: 1rem 6rem;
+  justify-content: space-between;
+}
+
+.call-title {
+  color: #F9FAF8;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.call-text {
+  color: #F9FAF8;
+}
+
+.call-button {
+  background-color: #3882F6;
+  color: #F9FAF8;
+  border-radius: 6px;
+  border-style: solid; 
+  border-color: #F9FAF8;
+  padding: 1rem 4rem; 
+  max-height: 3rem;  
+  align-self: center;
+}
+
+.footer{
+  background-color: #1F2937;
+  color: #E5E7EB
+}
+
+.footer-text{
+  text-align: center;
+  font-size: 12px;
 }
